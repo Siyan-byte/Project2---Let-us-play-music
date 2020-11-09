@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    </link>
+    <title>Let us play music</title>
+</head>
+
+<body>
+<!-- The record buttons -->
+    <div id="pricing" class="container-fluid">
+
+        <div class="text-center">
+
+            <img id="picture"  src="music/001.jpg" >
+        </div>
+        <table class="table  table-hover ">
+
+            <tbody>
+                <tr>
+                    <td>
+                        <button id='b1' class="btn  btn-dark  w-25 p-1" onclick="play1()"></button>
+                    </td>
+                    <td>
+                        <button id='b2' class="btn  btn-dark  w-25 p-1" onclick="play2()"></button>
+                    </td>
+                    <td>
+                        <button id='b3' class="btn  btn-dark  w-25 p-1" onclick="play3()"></button>
+                    </td>
+                    <td>
+                        <button id='b4' class="btn  btn-dark  w-25 p-1" onclick="play4()"></button>
+                    </td>
+                </tr>
+                <tr>
+
+                    <td>
+                        <button id='b5' class="btn  btn-dark  w-25 p-1" onclick="play5()"></button>
+                    </td>
+                    <td>
+                        <button id='b6' class="btn  btn-dark  w-25 p-1" onclick="play6()"></button>
+                    </td>
+                    <td>
+                        <button id='b7' class="btn  btn-dark  w-25 p-1" onclick="play7()"></button>
+                    </td>
+                    <td>
+                        <button id='b8' class="btn  btn-dark  w-25 p-1" onclick="play8()"></button>
+                    </td>
+                </tr>
+                <tr>
+
+                    <td>
+                        <button id='b9' class="btn  btn-dark  w-25 p-1" onclick="play9()"></button>
+                    </td>
+                    <td>
+                        <button id='b10' class="btn  btn-dark  w-25 p-1" onclick="play10()"></button>
+                    </td>
+                    <td>
+                        <button id='b11' class="btn  btn-dark  w-25 p-1" onclick="play11()"></button>
+                    </td>
+                    <td>
+                        <button id='b12' class="btn  btn-dark  w-25 p-1" onclick="play12()"></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+<!-- loading the socket.io library on the client side, we need the client to be able to use the socket.io library-->
+        <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+
+       
+        <script type="text/javascript">
+
+
+            function play1() {
+                var audio = new Audio('music/1.mp3');
+                audio.play();
+            }
+
+            function play2() {
+                var audio = new Audio('music/2.mp3');
+                audio.play();
+            }
+
+            function play3() {
+                var audio = new Audio('music/3.mp3');
+                audio.play();
+            }
+
+            function play4() {
+                var audio = new Audio('music/4.mp3');
+                audio.play();
+            }
+
+            function play5() {
+                var audio = new Audio('music/5.mp3');
+                audio.play();
+            }
+
+            function play6() {
+                var audio = new Audio('music/6.mp3');
+                audio.play();
+            }
+
+            function play7() {
+                var audio = new Audio('music/7.mp3');
+                audio.play();
+            }
+
+            function play8() {
+                var audio = new Audio('music/8.mp3');
+                audio.play();
+            }
+
+            function play9() {
+                var audio = new Audio('music/9.mp3');
+                audio.play();
+            }
+
+            function play10() {
+                var audio = new Audio('music/10.mp3');
+                audio.play();
+            }
+
+            function play11() {
+                var audio = new Audio('music/11.mp3');
+                audio.play();
+            }
+
+            function play12() {
+                var audio = new Audio('music/12.mp3');
+                audio.play();
+            }
+           
+        </script>
+
+ <!-- lodaing our own JS file -->
+        <script src="app.js"></script>
+</body>
+
+</html>
