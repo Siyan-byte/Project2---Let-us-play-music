@@ -9,8 +9,8 @@ app.use('/', express.static('public'));
 let http = require('http');
 let server = http.createServer(app);
 let port = process.env.PORT || 3000;
-app.listen(port, ()=> {
-console.log('listening at ', port);
+server.listen(port, () => {
+    console.log("Server listening at port: " + port);
 });
 
 
@@ -18,26 +18,22 @@ console.log('listening at ', port);
 let io = require('socket.io').listen(server);
 
 //Listen for individual clients/users to connect
-io.sockets.on('connection', function(socket) {
+io.sockets.on('connection', function (socket) {
     console.log("We have a new client: " + socket.id);
 
-    //Listen for a message named 'msg' from this client
-    socket.on('msg', function(data) {
-        //Data can be numbers, strings, objects
-        console.log("Received a 'msg' event");
-        console.log(data);
+    //Listen for a message named 'button' from this client
+    socket.on('button', function(button){
+        
+        console.log("Received a 'button' event");
+        console.log(button);
 
         //Send a response to all clients, including this one
-        io.sockets.emit('msg', data);
-
-        var music = {
-            music: data
-        };
+        io.sockets.emit('button', button);
 
     });
 
     //Listen for this client to disconnect
-    socket.on('disconnect', function() {
+    socket.on('disconnect', function () {
         console.log("A client has disconnected: " + socket.id);
     });
 });
