@@ -1,10 +1,5 @@
-CHAT APP - Single Page
+Let us play music
 ----------------------
-
-### SETUP 
-* Run `npm install` to load the necessary node packages
-* Open two broswer windows both pointing to `localhost:3000`
-
-### NEXT STEPS
-* Save a user's name once at the beginning
-* Let other user's know when someone is typing
+* 
+user A sned the music elements to server 
+server send the music elements to every user include user A 
